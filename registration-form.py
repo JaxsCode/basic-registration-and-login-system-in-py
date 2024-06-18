@@ -1,3 +1,4 @@
+#IMPORTANT: REPLACE [username] WITH [password] YOUR USERNAME AND PASSWORD REPECTIVELY.
 import sys
 from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit,  QLineEdit, QPushButton,QMessageBox
 from PyQt6.QtGui import QFont
@@ -5,15 +6,15 @@ import mysql.connector
 
 db = mysql.connector.connect(
 host = 'localhost',
-user = "root",
-password = "vishuofficialpassword",
+user = [username],
+password = [password],
 database = "users")
 sql = db.cursor()
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.msg = QLabel("YOU HAVE BEEN HACKED :)",self)
+        self.msg = QLabel("NEW WINDOW !! :)",self)
 
 class StartWindow(QMainWindow,QLineEdit):
     def __init__(self,sql,db):
